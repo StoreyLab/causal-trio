@@ -1,0 +1,26 @@
+% for notes (adapted from Wei)
+\usepackage{todonotes} % for \todo
+\usepackage{xargs} % for \newcommandx
+\newcommandx{\mytodo}[2][1=]{\todo[size=\tiny,color=yellow,#1]{#2}} % size=\tiny version
+
+% for editing, changes the color of editing highlights...
+% NEW elegant solution
+\newcommand{\changed}[1]{%
+{\color{blue}#1}%
+}%
+% NOTE: this command dies if it contains more than one paragraph (and citations, and headings), so we use the older \color version above
+%\textcolor{blue}{#1}%
+
+
+% OLD hacks initially marked things red in text, then here redefined the color red!
+%\colorlet{red}{red!50!black}
+%\colorlet{red}{blue!50!black}
+%\colorlet{red}{black} % no highlighting
+
+%% % for easy text highlighting!  (unfortunately, have to ``register'' commands to avoid some stupid problems)
+%% \usepackage{soul}
+%% \soulregister{\Fst}{0}
+%% % this is for equations, requires colorx package
+%% \newcommand{\hle}[1]{%
+%%   \colorbox{yellow}{$\displaystyle#1$}}
+

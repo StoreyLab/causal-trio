@@ -1,0 +1,30 @@
+% below are Alex's biblatex settings for the FST paper
+%% loads biblatex with all the nice standard options that John determined some time ago!
+%% this version uses a ``Harvard'' style (first author last name, year in parentheses).
+%% also loads xpatch
+
+%% biblatex
+%% harvard style
+%%% \usepackage[style=authoryear,natbib,maxcitenames=2,doi=false,isbn=false,url=false,backend=bibtex,date=year]{biblatex}
+%% numeric style
+\usepackage[style=numeric-comp,sorting=none,doi=false,isbn=false,url=false,backend=bibtex,date=year]{biblatex}
+
+%% to have citep etc work without a hitch here...
+\newcommand{\citep}{\cite}
+\newcommand{\citet}{\cite}
+
+%% remove "In: " before journal title
+\renewbibmacro{in:}{}
+%% remove language
+\AtEveryBibitem{\clearlist{language}}
+%% remove month
+%%\AtEveryBibitem{\clearfield{month}}
+%% remove dots between volume and issue
+\usepackage{xpatch}
+\xpatchbibmacro{volume+number+eid}{%
+  \setunit*{\adddot}%
+}{%
+}{}{}
+%% put issue in parentheses
+\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
+
