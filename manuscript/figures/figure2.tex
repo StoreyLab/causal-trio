@@ -168,10 +168,10 @@
 ($(C) + (1, -.6)$) node(control) {Control (size $N_0$)}
 ($(mp)$) node(mp) {Case Alleles $(A^m,A^p)|Y=1$:}
 ($(Y1) + (0, 1)$) node(g1) {$(1, 1)$}
-($(Y2) + (0, 1)$) node(g2) {$(1, 0)$}
+($(Y2) + (0, 1)$) node(g2) {$(0, 0)$}
 ($(Y3) + (0, 1)$) node(g3) {$(0, 1)$}
 ($(Y4) + (0, 1)$) node(g4) {$(1, 0)$}
-($(Y5) + (0, 1)$) node(g5) {$(1, 0)$}
+($(Y5) + (0, 1)$) node(g5) {$(1, 1)$}
 ($(Y6) + (0, 1)$) node(g6) {$(0, 0)$}
 ($(Y7) + (0, 1)$) node(g7) {$(0, 1)$};
 
@@ -199,13 +199,13 @@
 
 % straight arrow lines
 \draw[->, line width = 1, color = black] (y1m) to (t1);
-\draw[->, line width = 1, color = black] (y2m) to (t2);
-\draw[->, line width = 1, color = black] (y3p) to (t3);
-\draw[->, line width = 1, color = black] (y5m) to (t4);
+\draw[->, line width = 1, color = black] (y3p) to (t2);
+\draw[->, line width = 1, color = black] (y5m) to (t3);
+\draw[->, line width = 1, color = black] (y5p) to (t4);
 \draw[->, line width = 1, color = black] (y7p) to (t5);
-\draw[->, line width = 1, color = black] (y2p) to (c1);
-\draw[->, line width = 1, color = black] (y3m) to (c2);
-\draw[->, line width = 1, color = black] (y5p) to (c3);
+\draw[->, line width = 1, color = black] (y2m) to (c1);
+\draw[->, line width = 1, color = black] (y2p) to (c2);
+\draw[->, line width = 1, color = black] (y3m) to (c3);
 \draw[->, line width = 1, color = black] (y6m) to (c4);
 
 \end{tikzpicture}
