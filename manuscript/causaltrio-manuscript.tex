@@ -700,7 +700,7 @@ Based on \Cref{eq:jointprobs}, it is trivial to show that $\pp(A_c = a | Z_c = 1
 \begin{equation*}
 \pp(A_d = a, A_c = b | Z_d = 1, Z_c = 1) = \pp(A_d = a | Z_d = 1) \pp(A_c = b | Z_c = 1)
 \end{equation*}
-for $a, b \in \{0, 1\}$ whenever the quantities in \Cref{eq:jointprobs} equal $1/4$, which holds if and only if either $\eta_{cd} = 1/2$ or $\theta_{ab} = 1/2$. Note that the it does not need to be the case that $\eta_{cd} = \theta_{ab} = 1/2$; only one of the parameters needs to equal $1/2$.
+for $a, b \in \{0, 1\}$ whenever the quantities in \Cref{eq:jointprobs} equal $1/4$, which holds if and only if either $\eta_{cd} = 1/2$ or $\theta_{ab} = 1/2$. Note that it does not need to be the case that $\eta_{cd} = \theta_{ab} = 1/2$; only one of the parameters needs to equal $1/2$.
 
 When markers $c$ and $d$ are in linkage equilibrium, it will be the case that $\eta_{cd} = 1/2$, and when markers $c$ and $d$ are genetically unlinked (in the meiotic sense), it will be the case that $\theta_{ab} = 1/2$. When \textit{both} of these do not hold, then the randomization at marker $d$ is probabilistically dependent with the randomization at $c$ and we say that these markers have \textit{randomization linkage}. This implies that the null hypothesis of marker $d$ is not true when marker $c$ is causal. In this case we say that $d$ is in \textit{causal linkage} with $Y$, formalized in the following definition.
 
@@ -739,7 +739,7 @@ where $(\iota,\beta)$ are scalar values, $(\alpha_0,\alpha_1,\alpha_2)$ are gene
 
 \begin{figure}
 \includegraphics[clip, trim=0cm 2cm 0cm 0cm, width = 1\textwidth]{./figures/figure3.png} % trim by left botm right top
-\caption{\textbf{The TMT is a valid test of causality. (A)} $d_{\tmt}$ is an unbiased estimator of $\delta_{\tmt}$. We followed \Cref{app:sim_trio_geno} to generate 5,000 trios from a structured population ($F_{ST}=0.2$) with 100,000 SNPs per individual and we randomly chose 100 loci to be causal. We simulated the child traits at the heritability levels ($h^2\in \{0.3,0.6,0.9\}$) based on \Cref{app:sim_quant_trait}. Shown are 1000 randomly chose instances of $d_{\tmt}-\delta_{\tmt}$ for each heritability level. \textbf{(B)} The TMT controls the FPR at the desired significance level per experiment. \textbf{(C)} The ROC curve from a randomly chosen simulated data set. Both the Normal$(0,1)$ (solid lines) and permutation (dotted lines) null distributions are shown.}
+\caption{\textbf{The TMT is a valid test of causality. (A)} $d_{\tmt}$ is an unbiased estimator of $\delta_{\tmt}$. We followed \Cref{app:sim_trio_geno} to generate 5,000 trios from a structured population ($F_{ST}=0.2$) with 100,000 SNPs per individual and we randomly chose 100 loci to be causal. We simulated the child traits at the heritability levels ($h^2\in \{0.3,0.6,0.9\}$) based on \Cref{app:sim_quant_trait}. Shown are 1,000 randomly chose instances of $d_{\tmt}-\delta_{\tmt}$ for each heritability level. \textbf{(B)} The TMT controls the FPR at the desired significance level per experiment. \textbf{(C)} The ROC curve from a randomly chosen simulated data set. Both the Normal$(0,1)$ (solid lines) and permutation (dotted lines) null distributions are shown.}
 \label{fig:tmt_ace}
 \end{figure}
 
@@ -764,7 +764,7 @@ We started from a small sample of 100 trios and permuted $\boldsymbol{Y}$ to gen
 
 \begin{figure}
 \includegraphics[clip, trim=0cm 0cm 0cm 0cm, width = 1\textwidth]{./figures/figure4.png} % trim by left botm right top
-\caption{\textbf{The TDT is a valid test of causality. (A)} $d_{\tdt}$ is an unbiased estimator of $\delta_{\tdt}$. We simulated 5000 affected-only trios based on the description in the text. We then calculated $d_{\tdt}$ and performed the TDT. Each box plot shows 1000 randomly chosen instances of $d_{\tdt}-\delta_{\tdt}$ at each heritability level. \textbf{(B)} The TDT and TMT control FPR at the desired significance level. We additionally applied the TMT to 5000 randomly chosen trios composed of an equal number of normal and affected children. We calculated the FPR for the TDT and TMT across a range of thresholds as shown. \textbf{(C)} The ROC curve for a randomly chosen data set for both the TDT and TMT.}
+\caption{\textbf{The TDT is a valid test of causality. (A)} $d_{\tdt}$ is an unbiased estimator of $\delta_{\tdt}$. We simulated 5,000 affected-only trios based on the description in the text. We then calculated $d_{\tdt}$ and performed the TDT. Each box plot shows 1,000 randomly chosen instances of $d_{\tdt}-\delta_{\tdt}$ at each heritability level. \textbf{(B)} The TDT and TMT control FPR at the desired significance level. We additionally applied the TMT to 5,000 randomly chosen trios composed of an equal number of normal and affected children. We calculated the FPR for the TDT and TMT across a range of thresholds as shown. \textbf{(C)} The ROC curve for a randomly chosen data set for both the TDT and TMT.}
 \label{fig:tdt_ace}
 \end{figure}
 
